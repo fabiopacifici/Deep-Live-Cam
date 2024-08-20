@@ -6,7 +6,7 @@
 	:: Inatalling ffmpeg if it's not already installed
 	choco install ffmpeg
 	:: Installing Python if it's not already installed
-	choco install python -y
+	choco install python310 -y
 	:: Assuming successful installation, we ensure pip is upgraded
 	python -m ensurepip --upgrade
 	:: Use pip to install the packages listed in 'requirements.txt'

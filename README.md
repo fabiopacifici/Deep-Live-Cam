@@ -28,12 +28,32 @@ Users of this software are expected to use this software responsibly while abidi
 
 Then put those 2 files on the "**models**" folder
 
+#### Create an environment
+
+```bash
+python -m venv env311
+```
+The command above creates a virtual environment in a folder called env311.
+You should see the folder in the working tree
+
 #### 4. Install dependency
 We highly recommend to work with a  `venv`  to avoid issues.
 ```
 pip install -r requirements.txt
 ```
 ##### DONE!!! If you dont have any GPU, You should be able to run roop using `python run.py` command. Keep in mind that while running the program for first time, it will download some models which can take time depending on your network connection.
+
+**Note: Timeout error** 
+
+During the requirements installation, if you receive a timeout error while installing any or the packages it can be helpful to run the following command instead 
+
+
+```bash
+pip install --timeout 600 -r requirements.txt
+```
+
+The above command uses the `--timeout 600` option that is used to set the scipt timeout to 10 minutes instead of the default 30s. This can be helpful with slow or unstable internet connections.  
+
 
 ### *Proceed if you want to use GPU Acceleration
 ### CUDA Execution Provider (Nvidia)*
